@@ -1,0 +1,10 @@
+// Font Mixins
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,600,700|Oswald:100,200,300,400,500,600');
+
+@mixin sans-font {
+    font-family: 'Open Sans', sans-serif;
+}
+@mixin oswald-font {
+    font-family: 'Oswald', sans-serif;
+}
