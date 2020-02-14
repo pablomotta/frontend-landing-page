@@ -23,14 +23,16 @@ const searchProblems = async searchText => {
         $searchResults.innerHTML = '';
     }
 
-    outputHtml(matches);
+    outputHtml(searchText, matches);
 };
 
 // Show results in HTML
 
-const outputHtml = matches => {
-    if (matches.length > 0) {
-        const html = matches
+const outputHtml = (searchText, arrayOfMatches) => {
+    if (arrayOfMatches.length > 0) {
+        const styledMatches = highlightLetters(searchText, arrayOfMatches);
+
+        const html = styledMatches
             .map(
                 match => `
                 <div class="result-items">
@@ -42,6 +44,20 @@ const outputHtml = matches => {
 
         $searchResults.innerHTML = html;
     }
+};
+
+const highlightLetters = (searchText, arrayOfMatches) => {
+    const regex = new RegExp(`${searchText}`, 'gi');
+    console.log(regex);
+
+    //loop through arrayOfMatches
+    const styledHtml = arrayOfMatches.map(match => {
+        //check each string if it has the combination of character from input field value
+        //return new array with modified strings containing <b></b> around the matched character combination.
+        const styledMatch = match.replace(regex, `<b>${searchText}</b>`);
+        return styledMatch;
+    });
+    return styledHtml;
 };
 
 $input.addEventListener('input', () => searchProblems($input.value));

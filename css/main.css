@@ -309,7 +309,7 @@ nav {
   }
 }
 
-@media (min-width: 730px) {
+@media (min-width: 775px) {
   .menu-wrap {
     display: none;
   }
@@ -568,7 +568,7 @@ nav {
 @media (min-width: 1024px) {
   .masthead .masthead-wrapper {
     position: relative;
-    padding: 24rem 10% 3rem;
+    padding: 18rem 10% 3rem;
     display: flex;
     flex-direction: row;
   }
