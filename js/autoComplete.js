@@ -48,7 +48,7 @@ const outputHtml = (searchText, arrayOfMatches) => {
 
 const highlightLetters = (searchText, arrayOfMatches) => {
     const regex = new RegExp(`${searchText}`, 'gi');
-    console.log(regex);
+    // console.log(regex);
 
     //loop through arrayOfMatches
     const styledHtml = arrayOfMatches.map(match => {
