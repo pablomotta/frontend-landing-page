@@ -84,31 +84,22 @@
                 </div>
                 <div class="search-box">
                     <p>Search For <br /><b>Solved Problems</b></p>
-                    <form class="search-input">
-                        <input
-                            type="text"
-                            id="input"
-                            aria-describedby="text"
-                            placeholder="Enter a problem"
-                        />
+                    <form class="search-input" autocomplete="off">
+                        <div class="autocomplete">
+                            <input
+                                type="text"
+                                id="input"
+                                aria-describedby="text"
+                                placeholder="Enter a problem"
+                            />
 
-                        <button type="submit" class="">
-                            Search
-                        </button>
-                        <div id="search-results">
-                            <!-- <div class="result-items">
-                                item 1
-                            </div>
-                            <div class="result-items">
-                                item 1
-                            </div>
-                            <div class="result-items">
-                                item 1
-                            </div>
-                            <div class="result-items">
-                                item 1
-                            </div> -->
+                            <button type="submit" class="">
+                                Search
+                            </button>
                         </div>
+                        <!-- <div id="search-results">
+                           
+                        </div> -->
                     </form>
                 </div>
             </div>
@@ -119,6 +110,8 @@
         <script src="vendor/jquery/jquery.min.js"></script>
 
         <!-- Custom JS -->
+
+        <script src="js/search.js"></script>
         <script src="js/autoComplete.js"></script>
     </body>
 </html>
