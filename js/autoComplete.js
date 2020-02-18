@@ -17,7 +17,6 @@ const autocomplete = (input, array) => {
         /*create  DIV element that will contain the items (values):*/
         a = document.createElement('DIV');
         a.setAttribute('id', this.id + 'autocomplete-list');
-        console.log(this.id);
         a.setAttribute('class', 'autocomplete-items');
         /*append the DIV element as a child of the autocomplete container:*/
         this.parentNode.appendChild(a);
@@ -106,72 +105,4 @@ const autocomplete = (input, array) => {
     });
 };
 /*initiate the autocomplete function on the "input" element, and pass along the countries array as possible autocomplete values:*/
-autocomplete(document.getElementById('input'), countries);
-
-///////////////////////////////////////////////////////////
-///////////////////   Auto Complete   /////////////////////
-///////////////////////////////////////////////////////////
-
-// const $input = document.getElementById('input'); //search
-// const $searchResults = document.getElementById('search-results'); //matchList
-
-// const searchProblems = async searchText => {
-//     const res = await fetch('./js/data.json');
-//     const problems = await res.json();
-//     const allProblems = [];
-//     const result = problems.info;
-
-//     for (let i = 0; i < result.length; i++) {
-//         result[i].problems.map(item => {
-//             allProblems.push(item.title);
-//         });
-//     }
-//     // Get match to current text input
-//     let matches = allProblems.filter(problem => {
-//         const regex = new RegExp(`^${searchText}`, 'gi');
-//         return problem.match(regex);
-//     });
-
-//     if (searchText.length === 0) {
-//         matches = [];
-//         $searchResults.innerHTML = '';
-//     }
-
-//     outputHtml(searchText, matches);
-// };
-
-// // Show results in HTML
-
-// const outputHtml = (searchText, arrayOfMatches) => {
-//     if (arrayOfMatches.length > 0) {
-//         const styledMatches = highlightLetters(searchText, arrayOfMatches);
-
-//         const html = styledMatches
-//             .map(
-//                 match => `
-//                 <div class="result-items">
-//                     ${match}
-//                 </div>
-//                 `
-//             )
-//             .join('');
-
-//         $searchResults.innerHTML = html;
-//     }
-// };
-
-// const highlightLetters = (searchText, arrayOfMatches) => {
-//     const regex = new RegExp(`${searchText}`, 'gi');
-//     // console.log(regex);
-
-//     //loop through arrayOfMatches
-//     const styledHtml = arrayOfMatches.map(match => {
-//         //check each string if it has the combination of character from input field value
-//         //return new array with modified strings containing <b></b> around the matched character combination.
-//         const styledMatch = match.replace(regex, `<b>${searchText}</b>`);
-//         return styledMatch;
-//     });
-//     return styledHtml;
-// };
-
-// $input.addEventListener('input', () => searchProblems($input.value));
+autocomplete(document.getElementById('input'), problems);
